@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  background-color: #F3F3F3;
+  overflow-x: hidden;
+ background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url("https://ips4-wowslegends-global.gcdn.co/monthly_2022_08/Mackensen_Zieten_P-Hienrich_Dirffinger_DE_BB_1920x1080_LG_SPb_WoWSL_No_Logo.jpg.e9b87818b3aca2ce4ef14cacedcf528c.jpg");
+}
+
+.splash-title {
+  font-family: 'Bangers', cursive;
+  font-size: 10rem;
+  color: white;
+}
+
+.backroundMulti{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url("https://ips4-wowslegends-global.gcdn.co/monthly_2022_08/Mackensen_Zieten_P-Hienrich_Dirffinger_DE_BB_1920x1080_LG_SPb_WoWSL_No_Logo.jpg.e9b87818b3aca2ce4ef14cacedcf528c.jpg");
+  height: 100vh;
+}
+
+.btn {
+  font-size: inherit;
+  background-color: hsl(34, 94%, 67%);
+  padding: .5em 1em;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: .2em;
+  color: #333;
+}
+
+.btn:hover, .btn:focus {
+  background-color: hsl(30, 100%, 40%);
+}
+
+.splash-btn {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.splash-btn:first-child {
+  margin-left: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.battleship-grid {
+  margin: 2vmin;
+  display: grid;
+  background-color: hsl(200, 100%, 50%);
+  grid-template-rows: repeat(10, 4.6vmin);
+  grid-template-columns: repeat(10, 4.6vmin);
+}
+
+.grid-computer > .taken,
+.grid-computer > .boom {
+  background-color: hsl(200, 100%, 50%) !important;
+  border-radius: 0 !important;
+}
+
+.taken,
+.ship {
+  position: relative;
+  background-color: hsl(0, 0%, 80%);
+}
+
+.taken.start.vertical{
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.taken.end.vertical{
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.taken.start.horizontal{
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.taken.end.horizontal {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+
+.grid-display {
+  display: flex;
+}
+
+.ship > div {
+  width: 4.6vmin;
+  height: 4.6vmin;
+}
+
+.ship {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1vmin;
+  width: calc(4.6vmin * var(--width, 1));
+  height: calc(4.6vmin * var(--height, 1));
+  border-radius: 2.3vmin;
+}
+
+.battleship-grid div {
+  border: 1px solid hsla(0, 0%, 100%, .2);
+}
+
+.destroyer-container {
+  --width: 2;
+}
+
+.destroyer-container-vertical {
+  --height: 2;
+  --width: 1;
+}
+
+.submarine-container,
+.cruiser-container {
+  --width: 3;
+}
+
+.submarine-container-vertical,
+.cruiser-container-vertical {
+  --height: 3;
+  --width: 1;
+}
+
+.battleship-container {
+  --width: 4;
+}
+
+.battleship-container-vertical {
+  --height: 4;
+  --width: 1;
+}
+
+.carrier-container {
+  --width: 5;
+}
+
+.carrier-container-vertical {
+  --height: 5;
+  --width: 1;
+}
+
+.hidden-info {
+  font-size: 1.5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-text {
+  margin: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.miss,
+.boom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boom::after,
+.miss::after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.miss::after {
+  background-color: white;
+}
+
+.boom::after {
+  background-color: red;
+}
+.player {
+  margin: 2vmin;
+}
+
+.connected, .ready {
+  font-weight: normal;
+  opacity: .25;
+  text-decoration: line-through;
+}
+
+.connected.active,
+.ready.active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.white{
+  color: white;
+}
